@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stickers</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <h1>Puedes llevar hasta 10 stickers en total</h1>
+    <div class="stickers">
+        <div class="sticker">
+            <img src="./assets/img/sticker 1.png" alt="Sticker 1">
+            <br>
+            <input type="number" class="numero1">
+        </div>
+        <div class="sticker">
+            <img src="./assets/img/sticker 2.png" alt="Sticker 2">
+            <br>
+            <input type="number" class="numero2">
+        </div>
+        <div class="sticker">
+            <img src="./assets/img/sticker 3.png" alt="Sticker 3">
+            <br>
+            <input type="number" class="numero3">
+        </div>        
+
+
+    </div>
+    <div class="lógica">
+    <p class="total"></p>
+    <br>
+    <button onclick="
+var num1 = document.querySelector('.numero1').value
+var num2 = document.querySelector('.numero2').value
+var num3 = document.querySelector('.numero3').value
+var total= Number(num1)+Number(num2)+Number(num3)
+var tooMuch=document.querySelector('.total')
+
+if (total>10){
+    
+    tooMuch.innerHTML='Llevas demasiados stickers'
+} else {
+    var suma= document.querySelector('.total')
+suma.innerHTML=total
+}
+    ">Sumar Stickers</button>
+    </div>
+</body>
+</html>
